@@ -1,0 +1,247 @@
+.nav-menu {
+  position: fixed;
+  width: 19.125rem;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(32, 42, 104, 0.95);
+  z-index: 150;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transition: transform 400ms;
+  -webkit-transition: transform 400ms;
+  -moz-transition: transform 400ms;
+  -ms-transition: transform 400ms;
+  -o-transition: transform 400ms;
+
+  &.open {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  .nav-manu__items {
+    width: 100%;
+    list-style: none;
+    margin-top: 2.53rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 4rem;
+
+    .nav-menu__item {
+      padding: 16px 0;
+
+      .category-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 19px;
+
+        .text {
+          text-decoration: none;
+          color: #fff;
+          font-size: 1.19rem;
+          cursor: pointer;
+
+          &.high-light,
+          &:hover,
+          &:active {
+            color: #fb8e0f;
+
+            + .arrow {
+              background-image: url("../../../assets/images/nav/down-arrow_orange.svg");
+            }
+          }
+        }
+
+        .arrow {
+          width: 16px;
+          height: 19px;
+          background-image: url("../../../assets/images/nav/down-arrow_white.svg");
+          background-size: cover;
+          background-position: center;
+          cursor: pointer;
+          margin-left: 20px;
+        }
+      }
+
+      .category-items {
+        background-color: #fff;
+        list-style: none;
+        max-height: 0;
+        overflow: hidden;
+
+        .category-item {
+          padding: 16px 0 13px 0;
+
+          .link {
+            padding-right: calc(4rem + 20px);
+            font-size: 19px;
+            color: #202a68;
+            text-decoration: none;
+            line-height: 1;
+
+            &:hover,
+            &:active {
+              color: #fb8e0f;
+            }
+          }
+        }
+      }
+
+      &.open {
+        padding-bottom: 0;
+        margin-right: -4rem;
+        background-color: #fff;
+
+        .category-label {
+          margin-right: 4rem;
+          margin-bottom: 3px;
+
+          .text {
+            color: #fb8e0f;
+          }
+
+          .arrow {
+            background-image: url("../../../assets/images/nav/up-arrow_orange.svg");
+          }
+
+          &:hover,
+          &:active {
+            .arrow {
+              background-image: url("../../../assets/images/nav/up-arrow_orange.svg") !important;
+            }
+          }
+        }
+
+        .category-items {
+          max-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          padding: 8px 0 1px 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 368px;
+
+    .nav-manu__items {
+      margin-top: 68px;
+      padding-right: 60px;
+
+      .nav-menu__item {
+        margin-right: 0;
+
+        .category-label {
+          .text {
+            font-size: 26px;
+            line-height: 26px;
+
+            &.high-light,
+            &:hover,
+            &:active {
+              + .arrow {
+                background-image: url("../../../assets/images/nav/left-arrow_orange.svg");
+              }
+            }
+          }
+
+          .arrow {
+            margin-left: 36px;
+            background-image: url("../../../assets/images/nav/left-arrow_white.svg");
+          }
+        }
+
+        .category-items {
+          position: absolute;
+          width: 368px;
+          top: 0;
+          padding-top: 68px !important;
+          padding-right: 60px !important;
+          min-height: 100vh;
+          max-width: 100vh;
+          opacity: 0;
+          z-index: -1;
+          transform: translateX(4rem);
+          -webkit-transform: translateX(4rem);
+          -moz-transform: translateX(4rem);
+          -ms-transform: translateX(4rem);
+          -o-transform: translateX(4rem);
+          transition: transform 0.5s ease, opacity 0.5s ease;
+          -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+          -moz-transition: transform 0.5s ease, opacity 0.5s ease;
+          -ms-transition: transform 0.5s ease, opacity 0.5s ease;
+          -o-transition: transform 0.5s ease, opacity 0.5s ease;
+          .category-item {
+            margin-bottom: 2px;
+
+            .link {
+              font-size: 26px;
+              line-height: 26px;
+              padding: 0;
+              margin: 0;
+              &:hover,
+              &:active {
+              }
+            }
+          }
+        }
+
+        &.open {
+          margin-right: 0;
+          padding-bottom: 13px;
+          background-color: initial;
+          .category-label {
+            margin-right: 0;
+            .text {
+              color: #fff;
+
+              &.hover,
+              &:hover {
+                color: #fb8e0f;
+              }
+            }
+
+            .arrow {
+              background-image: url("../../../assets/images/nav/left-arrow_orange.svg");
+            }
+
+            &:hover,
+            &:active {
+              .arrow {
+                background-image: url("../../../assets/images/nav/left-arrow_orange.svg") !important;
+              }
+            }
+          }
+
+          .category-items {
+            opacity: 0.95;
+            transform: translateX(-308px);
+            -webkit-transform: translateX(-308px);
+            -moz-transform: translateX(-308px);
+            -ms-transform: translateX(-308px);
+            -o-transform: translateX(-308px);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+            -moz-transition: transform 0.5s ease, opacity 0.5s ease;
+            -ms-transition: transform 0.5s ease, opacity 0.5s ease;
+            -o-transition: transform 0.5s ease, opacity 0.5s ease;
+            .category-item {
+              .link {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

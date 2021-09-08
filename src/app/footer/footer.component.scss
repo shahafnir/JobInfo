@@ -1,0 +1,117 @@
+.container {
+  width: 100vw;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .footer {
+    width: 100%;
+    background-color: #fb8e0f;
+    padding-top: 24px;
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .social-links {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .link {
+        width: 82px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 41px;
+          transition: width 0.15s;
+          -webkit-transition: width 0.15s;
+          -moz-transition: width 0.15s;
+          -ms-transition: width 0.15s;
+          -o-transition: width 0.15s;
+          cursor: pointer;
+
+          &:hover {
+            width: 51px;
+          }
+        }
+      }
+    }
+
+    .categories {
+      .category {
+        padding-bottom: 0.45rem;
+
+        .label {
+          color: #fff;
+          font-size: 21px;
+          font-weight: normal;
+          margin: 0 0 8.4px;
+        }
+        .items {
+          display: flex;
+          flex-direction: column;
+          .item {
+            color: #000;
+            text-decoration: none;
+            padding-bottom: 0.63rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .credits {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: 40px;
+
+      .categories {
+        display: flex;
+        padding-bottom: 17px;
+        margin-right: -1px;
+
+        .category {
+          &#secondCategory {
+            margin: 0 64.5px 0 65px;
+          }
+
+          .label {
+            margin-bottom: 2px;
+          }
+
+          .items {
+            .item {
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .credits {
+        display: initial;
+        position: relative;
+        width: 100%;
+        .items {
+          position: absolute;
+          left: 51px;
+          bottom: 3px;
+          display: flex;
+          align-items: center;
+          .item {
+            margin-left: 13px;
+          }
+        }
+      }
+    }
+  }
+}

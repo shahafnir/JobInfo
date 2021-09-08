@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="employers-registration">
+    <div id="banners" class="banners"></div>
+    <div class="registration-form-container">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="registration-form">
+        <input
+          type="text"
+          name="companyName"
+          ngModel
+          (input)="onCompanyNameChange(companyName.value)"
+          id="companyName"
+          #companyName
+        />
+        <input
+          type="tel"
+          name="phoneNumber"
+          ngModel
+          (input)="onPhoneNumberChange(phoneNumber.value)"
+          id="phoneNumber"
+          #phoneNumber
+        />
+        <input
+          type="email"
+          name="email"
+          ngModel
+          (input)="onEmailChange(email.value)"
+          id="email"
+          #email
+        />
+        <button type="submit"></button>
+      </form>
+    </div>
+  </div>
+</div>

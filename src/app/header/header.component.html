@@ -1,0 +1,55 @@
+<div
+  class="header-container"
+  [ngClass]="{
+    static: staticHeader,
+    onScrollUp: !staticHeader && scrollUp,
+    onScrollDown: !staticHeader && !scrollUp
+  }"
+>
+  <div class="header-content">
+    <div class="nav-button" (click)="onNavMenuButtonClick()">
+      <div
+        class="nav-button__closed"
+        [ngClass]="{ 'nav-button__opened': navManuOpen }"
+      >
+        <div class="nav-button__bar first-bar"></div>
+        <div class="nav-button__bar second-bar"></div>
+        <div class="nav-button__bar third-bar"></div>
+      </div>
+    </div>
+    <app-nav-menu></app-nav-menu>
+    <div class="header-links">
+      <a href="" class="header-links__item">כניסה</a>
+      |
+      <a href="" class="header-links__item">הצטרפות</a>
+    </div>
+    <div class="jobs-waiting-container">
+      <div class="highlight-bar"></div>
+      <div class="jobs-waiting">
+        <span class="jobs-waiting__count">1057</span>
+        <span class="jobs-waiting__message">משרות ממתינות לך</span>
+      </div>
+    </div>
+  </div>
+  <div class="company-logo-container">
+    <a href="" class="company-link">
+      <img
+        src="https://www.jobinfo.co.il/Portals/_default/Skins/Jobinfo-2016Design/images/JI_logo_mobile.png"
+        alt="JobInfo"
+        class="company-img mobile"
+      />
+      <img
+        src="../../assets/images/JI_logo_desktop.png"
+        alt="JobInfo"
+        class="company-img desktop"
+      />
+      <span class="text">הרבה מעבר לחברת השמה</span>
+    </a>
+  </div>
+  <div class="triangle-container">
+    <div
+      class="triangle"
+      [ngClass]="{ onScrollUp: !staticHeader && scrollUp }"
+    ></div>
+  </div>
+</div>

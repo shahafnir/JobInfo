@@ -1,0 +1,398 @@
+<div class="nav-menu" [ngClass]="{ open: isOpen }">
+  <ul class="nav-manu__items">
+    <li class="nav-menu__item">
+      <div class="category-label">
+        <a href="" class="text">חיפוש עבודה</a>
+      </div>
+    </li>
+    <li class="nav-menu__item" #highTechJobs>
+      <div class="category-label">
+        <a
+          class="text"
+          #highTechJobsText
+          (click)="
+            extendedCategoryList !== highTechJobs
+              ? openCategoryListMobile(highTechJobs)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(highTechJobs)"
+          >דרושים הייטק
+        </a>
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(highTechJobsText)"
+          (mouseleave)="removeHighLightFromLabel(highTechJobsText)"
+          (click)="openCategoryListMobile(highTechJobs)"
+          (mouseover)="openCategoryListDesktop(highTechJobs)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">דרושים תוכנה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">דרושים אינטרנט</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">דרושים חומרה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">דרושים תשתיות</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">דרושים מערכות מידע</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item">
+      <div class="category-label">
+        <a href="" class="text">דף הבית</a>
+      </div>
+    </li>
+    <li class="nav-menu__item" #seniorJobs>
+      <div class="category-label">
+        <a
+          class="text"
+          #seniorJobsText
+          (click)="
+            extendedCategoryList !== seniorJobs
+              ? openCategoryListMobile(seniorJobs)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(seniorJobs)"
+          >השמת בכירים</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(seniorJobsText)"
+          (mouseleave)="removeHighLightFromLabel(seniorJobsText)"
+          (click)="openCategoryListMobile(seniorJobs)"
+          (mouseover)="openCategoryListDesktop(seniorJobs)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">פנייה אישית ודיסקרטית</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #highTechForums>
+      <div class="category-label">
+        <a
+          class="text"
+          #highTechForumsText
+          (click)="
+            extendedCategoryList !== highTechForums
+              ? openCategoryListMobile(highTechForums)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(highTechForums)"
+          >פורום עבודה בהייטק</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(highTechForumsText)"
+          (mouseleave)="removeHighLightFromLabel(highTechForumsText)"
+          (click)="openCategoryListMobile(highTechForums)"
+          (mouseover)="openCategoryListDesktop(highTechForums)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">פורום דיני עבודה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">פורום ניהול קריירה</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #salariesTables>
+      <div class="category-label">
+        <a
+          class="text"
+          #salariesTablesText
+          (click)="
+            extendedCategoryList !== salariesTables
+              ? openCategoryListMobile(salariesTables)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(salariesTables)"
+          >טבלאות שכר</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(salariesTablesText)"
+          (mouseleave)="removeHighLightFromLabel(salariesTablesText)"
+          (click)="openCategoryListMobile(salariesTables)"
+          (mouseover)="openCategoryListDesktop(salariesTables)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר תוכנה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר אינטרנט</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר חומרה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר ביומד</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר שיווק ומכירות</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר משאבי אנוש</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">טבלאות שכר בכירים</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #highTechCompanies>
+      <div class="category-label">
+        <a
+          class="text"
+          #highTechCompaniesText
+          (click)="
+            extendedCategoryList !== highTechCompanies
+              ? openCategoryListMobile(highTechCompanies)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(highTechCompanies)"
+          >חברות הייטק</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(highTechCompaniesText)"
+          (mouseleave)="removeHighLightFromLabel(highTechCompaniesText)"
+          (click)="openCategoryListMobile(highTechCompanies)"
+          (mouseover)="openCategoryListDesktop(highTechCompanies)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">אזורי הייטק בישראל</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">חברות הייטק בפתח תקווה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">פארק הייטק יוקנעם</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">חברות הייטק בחיפה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">פארק הייטק בבאר שבע</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">חברות הייטק בהרצליה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">חברות הייטק בירושלים</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #infoForCompanies>
+      <div class="category-label">
+        <a
+          class="text"
+          #infoForCompaniesText
+          (click)="
+            extendedCategoryList !== infoForCompanies
+              ? openCategoryListMobile(infoForCompanies)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(infoForCompanies)"
+          >מידע לחברות</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(infoForCompaniesText)"
+          (mouseleave)="removeHighLightFromLabel(infoForCompaniesText)"
+          (click)="openCategoryListMobile(infoForCompanies)"
+          (mouseover)="openCategoryListDesktop(infoForCompanies)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">פרופיל חברה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">Outplacement</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">סדנאות מקצועיות</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">גיוס לפרויקטים מיוחדים</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">שירותי HR במיקור חוץ</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #infoForCandidates>
+      <div class="category-label">
+        <a
+          class="text"
+          #infoForCandidatesText
+          (click)="
+            extendedCategoryList !== infoForCandidates
+              ? openCategoryListMobile(infoForCandidates)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(infoForCandidates)"
+          >מידע למועמד</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(infoForCandidatesText)"
+          (mouseleave)="removeHighLightFromLabel(infoForCandidatesText)"
+          (click)="openCategoryListMobile(infoForCandidates)"
+          (mouseover)="openCategoryListDesktop(infoForCandidates)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">פודקאסטים</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">מדריך וידאו למציאת עבודה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">מגמות בשוק ההייטק</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">מדריך חיפוש עבודה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">תנאים ושכר</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">מיומנות אישית</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">ביומד וקליניק</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">בריאות בעבודה</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #aboutUsHeb>
+      <div class="category-label">
+        <a
+          class="text"
+          #aboutUsHebText
+          (click)="
+            extendedCategoryList !== aboutUsHeb
+              ? openCategoryListMobile(aboutUsHeb)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(aboutUsHeb)"
+          >אודותנו</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(aboutUsHebText)"
+          (mouseleave)="removeHighLightFromLabel(aboutUsHebText)"
+          (click)="openCategoryListMobile(aboutUsHeb)"
+          (mouseover)="openCategoryListDesktop(aboutUsHeb)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">פרופיל חברה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">אודות חטיבת בכירים</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">הנבחרת שלנו</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">ההנהלה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">מכתבי תודה</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">הערכים שלנו</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">סודיות ופרטיות</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #contactUs>
+      <div class="category-label">
+        <a
+          class="text"
+          #contactUsText
+          (click)="
+            extendedCategoryList !== contactUs
+              ? openCategoryListMobile(contactUs)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(contactUs)"
+          >צור קשר</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(contactUsText)"
+          (mouseleave)="removeHighLightFromLabel(contactUsText)"
+          (click)="openCategoryListMobile(contactUs)"
+          (mouseover)="openCategoryListDesktop(contactUs)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">חברות</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">מועמדים</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-menu__item" #aboutUsEng>
+      <div class="category-label">
+        <a
+          class="text"
+          #aboutUsEngText
+          (click)="
+            extendedCategoryList !== aboutUsEng
+              ? openCategoryListMobile(aboutUsEng)
+              : ''
+          "
+          (mouseover)="openCategoryListDesktop(aboutUsEng)"
+          >About us</a
+        >
+        <span
+          class="arrow"
+          (mouseenter)="highLightLabel(aboutUsEngText)"
+          (mouseleave)="removeHighLightFromLabel(aboutUsEngText)"
+          (click)="openCategoryListMobile(aboutUsEng)"
+          (mouseover)="openCategoryListDesktop(aboutUsEng)"
+        ></span>
+      </div>
+      <ul class="category-items">
+        <li class="category-item">
+          <a href="" class="link">Company Profile</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">Jobinfo Divisions</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">Management</a>
+        </li>
+        <li class="category-item">
+          <a href="" class="link">Contact us</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

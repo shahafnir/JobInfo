@@ -1,0 +1,111 @@
+.candidates-info {
+  width: 100vw;
+  padding: 20px;
+  padding-left: 0;
+  background-color: #e8e8e8;
+  overflow: hidden;
+
+  .title-box {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+
+    .title {
+      width: 1248px;
+      height: 5rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        position: absolute;
+        color: #797a7a;
+        font-size: 21px;
+        padding-top: 13px;
+        white-space: nowrap;
+        transform: translateY(-0.5rem);
+        -webkit-transform: translateY(-0.5rem);
+        -moz-transform: translateY(-0.5rem);
+        -ms-transform: translateY(-0.5rem);
+        -o-transform: translateY(-0.5rem);
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 1248px;
+    background: url("https://www.jobinfo.co.il/Portals/_default/Skins/Jobinfo-2016Design/images/candidates_bg_mobile.jpg")
+      no-repeat right top #202a68;
+    background-size: 1250px 1200px;
+
+    .arrow-container {
+      display: flex;
+      justify-content: center;
+
+      .arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-top-color: #fff;
+        justify-self: center;
+      }
+    }
+
+    .content__items {
+      padding: 17px 28px;
+      list-style: none;
+
+      .content__item {
+        padding-bottom: 1.15rem;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover,
+          &:active {
+            color: #fb8e0f;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 220px;
+    padding: 32px 0;
+    .title-box {
+      width: 100%;
+      .title {
+        width: 100%;
+        height: 112px;
+      }
+    }
+
+    .content {
+      width: 100%;
+      background-size: 360px 340px;
+      background-position: 70% 43%;
+
+      .arrow-container {
+        .arrow {
+          border-top-color: #fff;
+          border-width: 5px;
+        }
+      }
+
+      .content__items {
+        width: 100%;
+        padding-bottom: 7px;
+
+        .content__item {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}

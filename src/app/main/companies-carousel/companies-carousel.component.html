@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="carousel">
+    <div class="image-box" *ngFor="let image of images; index as i">
+      <img id="img{{ i }}" src="{{ image }}" alt="company logo {{ i }}" />
+    </div>
+  </div>
+</div>

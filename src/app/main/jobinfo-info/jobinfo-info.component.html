@@ -1,0 +1,49 @@
+<div class="jobinfo-info-container">
+  <div class="info">
+    <div class="text" [ngClass]="{ open: isOpen }">
+      <div id="firstColumn">
+        <h2 class="label">חברת השמה בהייטק</h2>
+        <p>
+          Jobinfo מתמחה בתהליכי איתור וגיוס מועמדים טכנולוגים. כחברת השמה אנו
+          מלווים מעל 20 שנה מועמדים לכל אורך הקריירה, משלב היותם סטודנטים ועד
+          הגעתם למשרות ניהוליות בכירות. חלק גדול מהמועמדים שליווינו חוזרים
+          ומגייסים את הצוותים שלהם דרכנו.
+        </p>
+      </div>
+      <p id="secondColumn">
+        <span class="strong">
+          הירשמו לאתר Jobinfo ותוכלו להיחשף לעשרות משרות חדשות הנפתחות מידי יום
+        </span>
+        בתחומים: תוכנה, אינטרנט, חומרה, תקשורת, אבטחת מידע, ביומד, מערכות מידע
+        (DBA), כספים, שיווק ומכירות, רכש ותפעול. ניתן לפנות בקלות על ידי הרשמה
+        וטעינת קורות חיים חד פעמית.
+      </p>
+      <p>
+        <span class="strong">למה חברות השמה?</span>
+        כחברת השמה להייטק אנו מבינים את החשיבות של תכנון הקריירה שלכם. העבודה
+        לפי צוותי התמחות בשילוב מידע אודות דרישות החברות המגייסות מאפשרים לנו
+        לקדם אתכם לשלב הבא ולהתבלט מבין כל המועמדים. עם לקוחותינו נמנות חברות
+        מובילות בתעשיות ההייטק והביומד, סטרטאפים, חברות בינלאומיות ומרכזי פיתוח
+        הפועלים בארץ.
+      </p>
+    </div>
+    <div class="keep-reading-button" (click)="isOpen = !isOpen">
+      <span class="text">להמשך קריאה</span>
+      <img
+        src="../../../assets/images/plus_white.svg"
+        alt="plus"
+        [ngClass]="{ expand: isOpen }"
+      />
+    </div>
+  </div>
+  <div class="send-resume">
+    <div class="send-resume__button">
+      <img
+        src="../../../assets/images/white_bird.png"
+        alt="origami icon"
+        class="icon"
+      />
+      <span class="text"> שלח קו"ח אלינו </span>
+    </div>
+  </div>
+</div>

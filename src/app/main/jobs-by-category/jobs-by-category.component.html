@@ -1,0 +1,175 @@
+<div class="go-to-jobs-by-category-btn">
+  <a href="#jobsByCategory" class="arrow-btn-container">
+  </a>
+</div>
+<div id="jobsByCategory" class="jobs-by-category-container">
+  <h1 class="head-label">מצא משרות הייטק לפי תחום</h1>
+  <div class="categories">
+    <div class="software">
+      <div
+        class="label"
+        (click)="jobsCategories.swIsOpen = !jobsCategories.swIsOpen"
+      >
+        <h2>תוכנה</h2>
+        <img
+          src="../../../assets/images/plus_blue.svg"
+          alt="plus"
+          [ngClass]="{ open: jobsCategories.swIsOpen }"
+        />
+      </div>
+      <div class="content" [ngClass]="{ open: jobsCategories.swIsOpen }">
+        <ul class="jobs-items">
+          <li class="item"><a href="">מתכנת C#/.NET</a></li>
+          <li class="item"><a href="">מתכנת ++C</a></li>
+          <li class="item"><a href="">מפתח למובייל</a></li>
+          <li class="item"><a href="">מפתח אלגוריטמים</a></li>
+          <li class="item"><a href="">מתכנת JAVA</a></li>
+          <li class="item"><a href="">System Architect</a></li>
+          <li class="item"><a href="">RT/Embedded</a></li>
+        </ul>
+        <div class="more-jobs-container">
+          <div class="moreJobs">
+            <a href="">משרות תוכנה</a>
+            <span class="left-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="internet">
+      <div
+        class="label"
+        (click)="jobsCategories.internetIsOpen = !jobsCategories.internetIsOpen"
+      >
+        <h2>אינטרנט</h2>
+        <img
+          src="../../../assets/images/plus_white.svg"
+          alt="plus"
+          [ngClass]="{ open: jobsCategories.internetIsOpen }"
+        />
+      </div>
+      <div class="content" [ngClass]="{ open: jobsCategories.internetIsOpen }">
+        <ul class="jobs-items">
+          <li class="item"><a href="">מתכנת JavaScript</a></li>
+          <li class="item"><a href="">מתכנת Web</a></li>
+          <li class="item"><a href="">מתכנת PHP</a></li>
+          <li class="item"><a href="">ASP.NET</a></li>
+          <li class="item"><a href="">גרפיקאי/מעצב</a></li>
+          <li class="item"><a href="">מתכנת HTML</a></li>
+          <li class="item"><a href="">קידום אתרים</a></li>
+        </ul>
+        <div class="more-jobs-container">
+          <div class="moreJobs">
+            <a href="">משרות אינטרנט</a>
+            <span class="left-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hardware">
+      <div
+        class="label"
+        (click)="jobsCategories.hardwareIsOpen = !jobsCategories.hardwareIsOpen"
+      >
+        <h2>חומרה מולטידיספלינרי</h2>
+        <img
+          src="../../../assets/images/plus_white.svg"
+          alt="plus"
+          [ngClass]="{ open: jobsCategories.hardwareIsOpen }"
+        />
+      </div>
+      <div class="content" [ngClass]="{ open: jobsCategories.hardwareIsOpen }">
+        <ul class="jobs-items">
+          <li class="item"><a href="">Board Design</a></li>
+          <li class="item"><a href="">מהנדס וריפיקציה</a></li>
+          <li class="item"><a href="">Backend</a></li>
+          <li class="item"><a href="">ASIC/VLSI</a></li>
+          <li class="item"><a href="">מפתח אלגורתמים</a></li>
+          <li class="item"><a href="">מהנדס מערכת</a></li>
+          <li class="item"><a href="">מהנדס RF</a></li>
+        </ul>
+        <div class="more-jobs-container">
+          <div class="moreJobs">
+            <a href="">משרות חומרה</a>
+            <span class="left-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="infrastructure">
+      <div
+        class="label"
+        (click)="
+          jobsCategories.infrastructureIsOpen = !jobsCategories.infrastructureIsOpen
+        "
+      >
+        <h2>תשתיות</h2>
+        <img
+          src="../../../assets/images/plus_white.svg"
+          alt="plus"
+          [ngClass]="{ open: jobsCategories.infrastructureIsOpen }"
+        />
+      </div>
+      <div
+        class="content"
+        [ngClass]="{ open: jobsCategories.infrastructureIsOpen }"
+      >
+        <ul class="jobs-items">
+          <li class="item"><a href="">System Admin</a></li>
+          <li class="item"><a href="">System Manager</a></li>
+          <li class="item"><a href="">תמיכה טכנית</a></li>
+          <li class="item"><a href="">מומחה אבטחת מידע</a></li>
+        </ul>
+        <div class="more-jobs-container">
+          <div class="moreJobs">
+            <a href="">משרות תשתיות</a>
+            <span class="left-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="senior">
+      <div
+        class="label"
+        (click)="jobsCategories.seniorIsOpen = !jobsCategories.seniorIsOpen"
+      >
+        <h2>משרות בכירות</h2>
+        <img
+          src="../../../assets/images/plus_white.svg"
+          alt="plus"
+          [ngClass]="{ open: jobsCategories.seniorIsOpen }"
+        />
+      </div>
+      <div class="content" [ngClass]="{ open: jobsCategories.seniorIsOpen }">
+        <ul class="jobs-items">
+          <li class="item"><a href="">תוכנה</a></li>
+          <li class="item"><a href="">אינטרנט</a></li>
+          <li class="item"><a href="">חומרה</a></li>
+          <li class="item"><a href="">שיווק</a></li>
+          <li class="item"><a href="">מכירות</a></li>
+        </ul>
+        <div class="more-jobs-container">
+          <div class="moreJobs">
+            <a href="">משרות בכירות</a>
+            <span class="left-arrow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="general-jobs">
+      <div class="label">
+        <h2>למשרות הייטק נוספות</h2>
+      </div>
+      <div class="left-arrow-container">
+        <img
+          src="../../../assets/images/left-arrow_white.svg"
+          alt="left arrow"
+        />
+      </div>
+    </div>
+  </div>
+</div>

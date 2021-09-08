@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="triangle-container">
+    <div class="triangle"></div>
+  </div>
+  <div class="job-search">
+    <form class="job-search__form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <label for="jobTitle" *ngIf="isSearchInputEmpty">
+        חפש משרה (לדוגמה: SEO, אבטחת מידע, ++Java ,C)
+      </label>
+      <input
+        type="text"
+        id="jobTitle"
+        name="jobTitle"
+        class="search-input"
+        ngModel
+        #jobTitle
+        (focus)="isSearchInputEmpty = false"
+      />
+      <select name="JobArea" class="search-input" ngModel>
+        <option value="1">תל-אביב והמרכז</option>
+        <option value="7">אזור הדרום</option>
+        <option value="3">אזור השרון</option>
+        <option value="2">אזור השפלה</option>
+        <option value="4">אזור חיפה</option>
+        <option value="6">אזור ירושלים</option>
+        <option value="5">אזור צפון</option>
+        <option value="9">אזור צפון השרון</option>
+        <option value="8">חוץ לארץ</option>
+        <option value="18">Europe</option>
+        <option value="19">Far East</option>
+        <option value="17">United States</option>
+        <option value="">כל האזורים</option>
+      </select>
+      <button type="submit" class="search-button">חפש</button>
+      <a href="" class="advanced-search">חיפוש מתקדם</a>
+    </form>
+    <div class="send-resume">
+      <div class="send-resume__button">
+        <img
+          src="../../../assets/images/white_bird.png"
+          alt="origami icon"
+          class="icon"
+        />
+        <span class="text"> שלח קו"ח אלינו </span>
+      </div>
+    </div>
+  </div>
+</div>
+

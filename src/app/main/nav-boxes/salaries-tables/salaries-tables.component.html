@@ -1,0 +1,36 @@
+<div class="salaries-tables-container">
+  <div class="title-box" (click)="expandContent()">
+    <div class="title">
+      <span class="text"> טבלאות שכר </span>
+      <span class="expand-button"
+        ><img src="{{ expandButton }}" alt="expand content"
+      /></span>
+      <span class="plus-sign">
+        <img src="../../../../assets/images/plus-blue-fat.svg" alt="plus" />
+      </span>
+    </div>
+  </div>
+  <div class="arrow-container">
+    <div class="arrow-box">
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <div class="cover">
+    <img
+      src="https://www.jobinfo.co.il/Portals/_default/Skins/Jobinfo-2016Design/images/salaryTables_bg.gif"
+      alt="cover image"
+    />
+  </div>
+  <div class="content" [ngClass]="{ open: isExpand }">
+    <ul class="content__items">
+      <li class="content__item"><a href="">תוכנה</a></li>
+      <li class="content__item"><a href="">אינטרנט</a></li>
+      <li class="content__item"><a href="">חומרה</a></li>
+      <li class="content__item"><a href="">ביומד</a></li>
+      <li class="content__item"><a href="">שיווק ומכירות</a></li>
+      <li class="content__item"><a href="">משאבי אנוש</a></li>
+      <li class="content__item"><a href="">בכירים</a></li>
+      <li class="content__item"><a href="">הייטק</a></li>
+    </ul>
+  </div>
+</div>

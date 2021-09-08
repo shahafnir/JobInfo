@@ -1,0 +1,79 @@
+.social-responsibility-container {
+  display: none;
+  width: 100vw;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    min-height: 378px;
+    background-image: url("https://www.jobinfo.co.il/Portals/_default/Skins/Jobinfo-2016Design/images/bgphoto3.jpg");
+    background-position: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      text-decoration: none;
+      cursor: initial;
+
+      .first-line {
+        margin-top: 41px;
+        display: flex;
+        align-items: center;
+        .text {
+          font-size: 52px;
+          line-height: 1;
+          cursor: pointer;
+
+          &:hover, &:active {
+            +.arrow-container{
+              #arrow{
+                background-image: url('../../../assets/images/left-arrow_orange.svg');
+              }
+            }
+          }
+        }
+
+        .arrow-container {
+          width: 48px;
+          height: 48px;
+          background-color: #202a68;
+          margin-right: 14px;
+          margin-top: 1px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          .arrow {
+            height: 25px;
+            width: 22px;
+            background-image: url("../../../assets/images/left-arrow_white.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &.orange{
+              background-image: url('../../../assets/images/left-arrow_orange.svg');
+            }
+          }
+
+          &:hover, &:active {
+            #arrow{
+              background-image: url('../../../assets/images/left-arrow_orange.svg');
+            }
+          }
+        }
+      }
+
+      .second-line {
+        line-height: 1.2;
+        padding-right: 2.5px;
+        font-size: 19.2px;
+        cursor: pointer;
+      }
+    }
+  }
+}

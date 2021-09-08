@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.header-container {
+  width: 100%;
+  max-width: 1920px;
+  height: 3.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  &.static {
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.13) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  &.onScrollUp {
+    @media (max-width: 1023px) {
+      top: -3.13rem;
+      transform: translateY(3.12rem);
+      position: fixed;
+      background: linear-gradient(to right, #d3d1d1 0%, #949191 100%);
+      -webkit-transform: translateY(3.12rem);
+      -moz-transform: translateY(3.12rem);
+      -ms-transform: translateY(3.12rem);
+      -o-transform: translateY(3.12rem);
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+    }
+  }
+
+  &.onScrollDown {
+    @media (max-width: 1023px) {
+      top: -3.15rem;
+      position: fixed;
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: #ffff;
+
+    .nav-button {
+      position: absolute;
+      width: 3.43rem;
+      height: 100%;
+      padding: 0;
+      cursor: pointer;
+      background-color: rgba(32, 42, 104, 0.95);
+      z-index: 200;
+
+      .nav-button__closed {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .nav-button__bar {
+          position: absolute;
+          width: 1.375rem;
+          height: 0.13rem;
+          background-color: #fff;
+          transition: all 5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 5s;
+          -ms-transition: all 5s;
+          -o-transition: all 5s;
+
+          &.first-bar {
+            transform: translateY(-7px);
+            -webkit-transform: translateY(-7px);
+            -moz-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+            -o-transform: translateY(-7px);
+          }
+
+          &.third-bar {
+            transform: translateY(7px);
+            -webkit-transform: translateY(7px);
+            -moz-transform: translateY(7px);
+            -ms-transform: translateY(7px);
+            -o-transform: translateY(7px);
+          }
+        }
+      }
+
+      .nav-button__opened {
+        position: fixed;
+        height: fit-content;
+        top: 1.55rem;
+        right: 1.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .nav-button__bar {
+          &.first-bar {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+          }
+
+          &.second-bar {
+            width: 0;
+            opacity: 0;
+          }
+
+          &.third-bar {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .header-links {
+      height: 100%;
+      margin-bottom: 0.1rem;
+      margin-right: 0.28rem + 3.43rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .header-links__item {
+        padding: 0.78rem;
+        text-decoration: none;
+        color: #ffff;
+      }
+    }
+
+    .jobs-waiting-container {
+      display: none;
+    }
+  }
+
+  .company-logo-container {
+    position: absolute;
+    left: 0;
+    padding: 0.5rem 0.95rem;
+    height: 100%;
+    z-index: 1;
+
+    @media (max-width: 340px) {
+      padding-left: 8px;
+    }
+
+    .company-img {
+      height: 2.1rem;
+
+      &.desktop {
+        display: none;
+      }
+    }
+
+    .text {
+      display: none;
+    }
+  }
+
+  .triangle-container {
+    position: absolute;
+    height: 100%;
+    width: 42.65vw;
+    left: 0;
+    overflow: hidden;
+
+    .triangle {
+      position: relative;
+      display: block;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 40vw solid #be6805;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      opacity: 0;
+
+      &.onScrollUp {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    height: 84px;
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.13) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+
+    .header-content {
+      .nav-button {
+        position: fixed;
+        width: 91px;
+        height: 84px;
+
+        .nav-button__closed {
+          .nav-button__bar {
+            width: 37px;
+            height: 3px;
+            margin: 0 -2px 2px 0;
+
+            &.first-bar {
+              transform: translateY(-12px);
+              -webkit-transform: translateY(-12px);
+              -moz-transform: translateY(-12px);
+              -ms-transform: translateY(-12px);
+              -o-transform: translateY(-12px);
+            }
+
+            &.third-bar {
+              transform: translateY(12px);
+              -webkit-transform: translateY(12px);
+              -moz-transform: translateY(12px);
+              -ms-transform: translateY(12px);
+              -o-transform: translateY(12px);
+            }
+          }
+        }
+
+        .nav-button__opened {
+          .nav-button__bar {
+            top: 15px;
+            right: 1px;
+
+            &.first-bar {
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+            }
+
+            &.third-bar {
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+            }
+          }
+        }
+      }
+
+      .header-links {
+        margin-right: calc(50vw - 399.5px);
+        margin-bottom: 1.8rem;
+
+        @media (min-width: 1121px) {
+          margin-right: calc(50vw - 495.5px);
+        }
+
+        .header-links__item {
+          padding: 0 4.5px;
+        }
+      }
+
+      .jobs-waiting-container {
+        height: 100%;
+        margin-right: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3px;
+
+        .highlight-bar {
+          width: 0.15rem;
+          height: 40px;
+          background-color: #fb8e0f;
+          margin-left: 4px;
+        }
+        .jobs-waiting {
+          height: 49px;
+          color: #fff;
+          margin-right: 8px;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+
+          .jobs-waiting__count {
+            font-family: "Roboto", sans-serif;
+            font-size: 49.6px;
+            font-weight: 100;
+            line-height: 1;
+            margin-bottom: -1px;
+          }
+          .jobs-waiting__message {
+            font-size: 16px;
+            line-height: 1;
+            padding: 0 5px 4px 0;
+          }
+        }
+      }
+    }
+
+    .company-logo-container {
+      margin-left: 3px;
+
+      @media (min-width: 1121px) {
+        margin-left: 45px;
+
+        @media (min-width: 1601px) {
+          margin-left: 145px;
+        }
+      }
+
+      .company-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        .company-img {
+          width: 141px;
+          height: 55px;
+
+          &.mobile {
+            display: none;
+          }
+
+          &.desktop {
+            display: inline-flex;
+          }
+        }
+
+        .text {
+          display: inline-flex;
+          color: #fff;
+          font-size: 12px;
+          margin-top: -1px;
+          letter-spacing: 0.5px;
+          word-spacing: 0.75px;
+        }
+      }
+    }
+  }
+}

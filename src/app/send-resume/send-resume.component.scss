@@ -1,0 +1,29 @@
+.send-resume-button {
+  position: fixed;
+  width: 302px;
+  height: 37px;
+  left:  0;
+  bottom: 0;
+  border: 1px solid #fff;
+  background-color: #ea9338;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 150;
+
+  .text {
+    color: #fff;
+    font: 21px "arial", "helvetica", sans-serif;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-right: 20px;
+    padding-left: 43px;
+  }
+
+  .icon {
+    padding-top: 2px;
+    width: 34px;
+    height: 29px;
+  }
+}
